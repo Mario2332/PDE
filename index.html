@@ -8,16 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    
+    <!-- A "chamar" o nosso ficheiro de decoração (CSS) -->
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body class="antialiased">
 
+    <!-- 1. Headline e subheadline -->
     <section class="relative hero-bg overflow-hidden">
-        <div class="container mx-auto px-6 h-full">
+        <div class="container mx-auto px-8">
             <div class="flex flex-col md:flex-row items-center justify-between md:min-h-screen pt-24 md:pt-0">
-                <div class="md:w-1/2 lg:w-3/5 text-center md:text-left pt-28 md:pt-20 z-10">
+                <div class="md:w-1/2 lg:w-3/5 text-center md:text-left pt-24 md:pt-16 z-10">
                     <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wide">PADRÕES DO ENEM</h1>
                     <p class="text-xl md:text-3xl font-semibold gradient-text mb-8 max-w-4xl mx-auto md:mx-0">Domine os padrões do ENEM, ganhe um tempo valioso nas provas, aumente o seu número de acertos e seja aprovado no curso que você quiser.</p>
                     <p class="text-lg text-gray-300 mb-12 max-w-2xl">Chega de perder pontos em questões que você poderia prever. O método PDE te mostra o caminho para otimizar seu tempo e maximizar seus acertos.</p>
@@ -26,15 +28,16 @@
                     </a>
                 </div>
                 <div class="relative md:w-1/2 lg:w-2/5 flex justify-center md:justify-end h-full self-end">
-                    <img src="https://i.ibb.co/MySLztTY/Foto-minha-para-site-com-fundo-preto-e-luz-azul.png" alt="Mário Machado, criador do curso Padrões do ENEM" class="md:absolute bottom-0 md:w-[48vw] lg:w-[40vw] max-w-lg md:max-w-none h-auto pointer-events-none">
+                    <img src="https://i.ibb.co/MySLztTY/Foto-minha-para-site-com-fundo-preto-e-luz-azul.png" alt="Mário Machado, criador do curso Padrões do ENEM" class="relative md:top-4 md:w-[45vw] lg:w-[38vw] max-w-lg md:max-w-none h-auto">
                     <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 md:py-28">
-        <div class="container mx-auto px-6">
+    <!-- 2. Sobre o Padrões do ENEM -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-8">
              <div class="text-center max-w-3xl mx-auto">
                 <h2 class="section-title text-3xl md:text-4xl mb-6">Sobre o Padrões do ENEM</h2>
                 <div class="space-y-6 text-lg text-gray-400">
@@ -55,18 +58,21 @@
         </div>
     </section>
 
-    <section class="py-20 md:py-28 bg-black">
-        <div class="container mx-auto px-6">
+    <!-- 3. O Padrões do ENEM é para você que quer: -->
+    <section class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="section-title text-3xl md:text-4xl mb-4">O Padrões do ENEM é para você que quer:</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="for-who-section">
-                </div>
+                <!-- O conteúdo aqui será inserido pelo JavaScript -->
+            </div>
         </div>
     </section>
-
-    <section class="py-20 md:py-28">
-        <div class="container mx-auto px-6">
+    
+    <!-- 4. O que Você Vai Aprender no Curso "Padrões do ENEM"? -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="section-title text-3xl md:text-4xl mb-4">O que Você Vai Aprender no Curso?</h2>
             </div>
@@ -89,9 +95,10 @@
             </div>
         </div>
     </section>
-
-    <section class="py-20 md:py-28 bg-black">
-        <div class="container mx-auto px-6">
+    
+    <!-- 5. Acesso à comunidade de alunos -->
+    <section class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-8">
             <div class="text-center max-w-3xl mx-auto">
                 <i data-lucide="users" class="w-16 h-16 gradient-text mb-8 mx-auto"></i>
                 <h2 class="section-title text-3xl md:text-4xl mb-6">Acesso à Comunidade de Alunos</h2>
@@ -102,20 +109,23 @@
              </div>
         </div>
     </section>
-
-    <section class="py-20 md:py-28">
-        <div class="container mx-auto px-6">
+    
+    <!-- 6. E não para por aí! -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="section-title text-3xl md:text-4xl mb-4">E não para por aí! Garanta sua vaga e receba <span class="gradient-text">7 BÔNUS EXCLUSIVOS</span></h2>
                 <p class="text-gray-400">Ao se inscrever no PDE, você leva um pacote completo de ferramentas para acelerar sua aprovação.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="bonus-section">
-                </div>
+                <!-- O conteúdo aqui será inserido pelo JavaScript -->
+            </div>
         </div>
     </section>
 
-    <section class="py-20 md:py-28 bg-black">
-        <div class="container mx-auto px-6">
+    <!-- 7. O que os meus alunos dizem: -->
+    <section class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="section-title text-3xl md:text-4xl mb-4">O que os meus alunos dizem:</h2>
             </div>
@@ -144,8 +154,9 @@
         </div>
     </section>
 
-    <section id="oferta" class="py-20 md:py-28">
-        <div class="container mx-auto px-6">
+    <!-- 8. Garanta a oferta mais absurda da história do PDE! -->
+    <section id="oferta" class="py-16 md:py-20">
+        <div class="container mx-auto px-8">
             <div class="max-w-2xl mx-auto bg-gray-900 border-2 border-blue-400 rounded-2xl shadow-2xl p-8 md:p-12 text-center shadow-blue-500/10">
                 <h2 class="section-title text-3xl md:text-4xl mb-4">Garanta a oferta mais absurda da história do PDE!</h2>
                 <p class="text-gray-400 mb-8">Escolha a melhor condição para você e comece a estudar da forma certa hoje mesmo.</p>
@@ -169,16 +180,18 @@
         </div>
     </section>
 
-    <section class="py-20 md:py-28">
-        <div class="container mx-auto px-6 text-center max-w-2xl">
+    <!-- 9. GARANTIA INCONDICIONAL DE 7 DIAS -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-8 text-center max-w-2xl">
             <img src="https://placehold.co/120x120/111827/60a5fa?text=7" alt="Selo de Garantia" class="mx-auto mb-8 rounded-full">
             <h2 class="section-title text-3xl md:text-4xl mb-4">GARANTIA INCONDICIONAL DE 7 DIAS</h2>
             <p class="text-gray-400 text-lg">Seu risco é zero. Garanta sua inscrição, acesse todo o conteúdo e, se por qualquer motivo não gostar, você tem 7 dias para pedir seu dinheiro de volta. Simples, rápido e sem perguntas. A decisão está nas suas mãos, mas o risco está todo nas minhas.</p>
         </div>
     </section>
 
-    <section class="py-20 md:py-28 bg-black">
-        <div class="container mx-auto px-6">
+    <!-- 10. QUEM É MÁRIO MACHADO? -->
+    <section class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-8">
             <div class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
                 <div class="md:w-1/2 relative">
                     <img src="https://i.ibb.co/MySLztTY/Foto-minha-para-site-com-fundo-preto-e-luz-azul.png" alt="Foto de Mário Machado" class="rounded-2xl shadow-xl w-full h-auto">
@@ -194,18 +207,21 @@
         </div>
     </section>
 
-    <section class="py-20 md:py-28">
-        <div class="container mx-auto px-6">
+    <!-- 11. PERGUNTAS FREQUENTES -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="section-title text-3xl md:text-4xl mb-4">Perguntas Frequentes</h2>
             </div>
             <div class="max-w-3xl mx-auto space-y-4" id="faq-accordion">
-                 </div>
+                 <!-- O conteúdo aqui será inserido pelo JavaScript -->
+            </div>
         </div>
     </section>
 
-    <section class="py-20 md:py-28 text-center bg-black">
-        <div class="container mx-auto px-6">
+    <!-- Final CTA -->
+    <section class="py-16 md:py-20 text-center bg-black">
+        <div class="container mx-auto px-8">
             <h2 class="text-3xl md:text-5xl font-black max-w-3xl mx-auto mb-8">Está a um passo de transformar sua preparação para o ENEM.</h2>
             <p class="text-lg text-gray-400 mb-12 max-w-xl mx-auto">Não deixe a chance de garantir sua vaga passar. O próximo aprovado pode ser você.</p>
             <a href="#oferta" class="cta-button bg-gradient-to-r from-blue-400 to-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg uppercase shadow-lg">
@@ -214,13 +230,15 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="py-10">
-        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-8 text-center text-gray-500 text-sm">
             <p>&copy; 2024 Padrões do ENEM. Todos os direitos reservados.</p>
             <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.</p>
         </div>
     </footer>
 
+    <!-- A "chamar" os nossos ficheiros de ícones e interatividade (JS) -->
     <script src="https://unpkg.com/lucide-react@0.379.0/dist/umd/lucide.min.js"></script>
     <script src="script.js" defer></script>
 
