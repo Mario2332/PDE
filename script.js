@@ -115,27 +115,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const viewCounter = document.getElementById('live-view-counter');
         if (!viewCounter) return;
 
-        let baseViews = Math.floor(Math.random() * (437 - 281 + 1)) + 281;
-        let currentViews = baseViews;
+        let currentViews = Math.floor(Math.random() * (437 - 281 + 1)) + 281;
         viewCounter.textContent = currentViews;
 
         setInterval(() => {
-            const change = Math.floor(Math.random() * 7) - 3; // -3 a +3
-            currentViews += change;
-
-            if (currentViews < baseViews - 20) {
-                currentViews = baseViews - 20;
-            } else if (currentViews > baseViews + 25) {
-                currentViews = baseViews + 25;
-            }
-
-            if (currentViews < 100) { // Garante que não baixe de 100
-                currentViews = 100 + Math.floor(Math.random() * 10);
-            }
+            // Gera um aumento pequeno e aleatório (entre 1 e 3)
+            const increase = Math.floor(Math.random() * 3) + 1;
+            currentViews += increase;
             
             viewCounter.textContent = currentViews;
 
-        }, Math.random() * (4500 - 2000) + 2000); // Intervalo aleatório entre 2 e 4.5 segundos
+        }, Math.random() * (9000 - 4000) + 4000); // Intervalo mais longo e aleatório entre 4 e 9 segundos
     }
 
     initLiveViewCounter();
