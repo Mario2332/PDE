@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const bonusData = [
-        { title: 'Bônus 1: Mentoria gravada (para os 20 primeiros)', description: 'Aprenda TUDO que precisa saber sobre essa parte crucial da preparação, na qual a maior parte dos estudantes comete erros que custa a aprovação.', icon: 'video', special: true },
+        { title: 'Bônus 1: Mentoria gravada sobre provas antigas e simulados (para os 20 primeiros)', description: 'Aprenda TUDO que precisa saber sobre essa parte crucial da preparação, na qual a maior parte dos estudantes comete erros que custa a aprovação.', icon: 'video', special: true },
         { title: 'Bônus 2: Aula de cálculo mental', description: 'Aprenda técnicas para aumentar a velocidade e a precisão na resolução de questões de matemática e ciências exatas, sem o uso de calculadora.', icon: 'brain-circuit' },
         { title: 'Bônus 3: Listas de Revisão Global', description: 'Listas com questões selecionadas a dedo que podem ser utilizadas em praticamente todas as revisões ao longo do ano.', icon: 'list-checks' },
         { title: 'Bônus 4: Guia para montar um horário de estudos eficiente', description: 'Aprenda a criar um cronograma realista que maximiza sua produtividade e evita sobrecargas.', icon: 'calendar-check' },
