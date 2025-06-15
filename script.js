@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const bonusData = [
-        { title: 'Bônus 1: Mentoria gravada sobre provas antigas e simulados (para os 20 primeiros)', description: 'Aprenda TUDO que precisa saber sobre essa parte crucial da preparação, na qual a maior parte dos estudantes comete erros que custa a aprovação.', icon: 'video', special: true },
+        { title: 'Bônus 1: Mentoria gravada (para os 20 primeiros)', description: 'Aprenda TUDO que precisa saber sobre essa parte crucial da preparação, na qual a maior parte dos estudantes comete erros que custa a aprovação.', icon: 'video', special: true },
         { title: 'Bônus 2: Aula de cálculo mental', description: 'Aprenda técnicas para aumentar a velocidade e a precisão na resolução de questões de matemática e ciências exatas, sem o uso de calculadora.', icon: 'brain-circuit' },
         { title: 'Bônus 3: Listas de Revisão Global', description: 'Listas com questões selecionadas a dedo que podem ser utilizadas em praticamente todas as revisões ao longo do ano.', icon: 'list-checks' },
         { title: 'Bônus 4: Guia para montar um horário de estudos eficiente', description: 'Aprenda a criar um cronograma realista que maximiza sua produtividade e evita sobrecargas.', icon: 'calendar-check' },
@@ -111,35 +111,33 @@ document.addEventListener('DOMContentLoaded', function() {
     `);
 
     // --- Live View Counter ---
-    function initLiveViews() {
-        const viewCounter = document.getElementById('view-counter');
+    function initLiveViewCounter() {
+        const viewCounter = document.getElementById('live-view-counter');
         if (!viewCounter) return;
 
-        let baseViews = Math.floor(Math.random() * (197 - 83 + 1)) + 83;
+        let baseViews = Math.floor(Math.random() * (437 - 281 + 1)) + 281;
         let currentViews = baseViews;
         viewCounter.textContent = currentViews;
-        lucide.createIcons(); // Criar ícones iniciais
 
         setInterval(() => {
-            const change = Math.floor(Math.random() * 5) - 2; // -2, -1, 0, 1, 2
+            const change = Math.floor(Math.random() * 7) - 3; // -3 a +3
             currentViews += change;
 
-            // Garante que o número não se afaste muito da base
-            if (currentViews < baseViews - 15) {
-                currentViews = baseViews - 15;
-            } else if (currentViews > baseViews + 20) {
-                currentViews = baseViews + 20;
+            if (currentViews < baseViews - 20) {
+                currentViews = baseViews - 20;
+            } else if (currentViews > baseViews + 25) {
+                currentViews = baseViews + 25;
             }
 
-            viewCounter.classList.add('updated');
-            setTimeout(() => {
-                viewCounter.textContent = currentViews;
-                viewCounter.classList.remove('updated');
-            }, 150);
+            if (currentViews < 100) { // Garante que não baixe de 100
+                currentViews = 100 + Math.floor(Math.random() * 10);
+            }
+            
+            viewCounter.textContent = currentViews;
 
-        }, Math.random() * (5000 - 2500) + 2500); // Intervalo aleatório entre 2.5 e 5 segundos
+        }, Math.random() * (4500 - 2000) + 2000); // Intervalo aleatório entre 2 e 4.5 segundos
     }
 
-    initLiveViews();
+    initLiveViewCounter();
     lucide.createIcons();
 });
