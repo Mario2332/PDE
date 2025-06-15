@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const bonusData = [
-        { title: 'Bônus 1: Mentoria gravada sobre provas antigas e simulados', description: 'Aprenda TUDO que precisa saber sobre essa parte crucial da preparação, na qual a maior parte dos estudantes comete erros que custa a aprovação.', icon: 'video' },
+        { title: 'Bônus 1: Mentoria gravada (para os 20 primeiros)', description: 'Aprenda TUDO que precisa saber sobre essa parte crucial da preparação, na qual a maior parte dos estudantes comete erros que custa a aprovação.', icon: 'video', special: true },
         { title: 'Bônus 2: Aula de cálculo mental', description: 'Aprenda técnicas para aumentar a velocidade e a precisão na resolução de questões de matemática e ciências exatas, sem o uso de calculadora.', icon: 'brain-circuit' },
         { title: 'Bônus 3: Listas de Revisão Global', description: 'Listas com questões selecionadas a dedo que podem ser utilizadas em praticamente todas as revisões ao longo do ano.', icon: 'list-checks' },
         { title: 'Bônus 4: Guia para montar um horário de estudos eficiente', description: 'Aprenda a criar um cronograma realista que maximiza sua produtividade e evita sobrecargas.', icon: 'calendar-check' },
         { title: 'Bônus 5: Planilhas para organização e metrificação dos estudos', description: 'Ferramentas poderosas para acompanhar seu progresso de forma detalhada e organizada.', icon: 'table' },
         { title: 'Bônus 6: Mentoria: Reta final de aprovado!', description: 'Aprenda exatamente o que fazer (e o que não fazer) para ter uma reta final para o ENEM de alto desempenho!', icon: 'star' },
-        { title: 'Bônus 7: A Última Revisão (para os 20 primeiros)', description: 'Material com 1000 questões por assunto, cronograma de revisão e planilha para análise de resultados.', icon: 'file-check-2', special: true }
+        { title: 'Bônus 7: A Última Revisão (para os 30 primeiros)', description: 'Material com 1000 questões por assunto, cronograma de revisão e planilha para análise de resultados.', icon: 'file-check-2', special: true }
     ];
 
     const faqData = [
@@ -110,5 +110,36 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     `);
 
+    // --- Live View Counter ---
+    function initLiveViews() {
+        const viewCounter = document.getElementById('view-counter');
+        if (!viewCounter) return;
+
+        let baseViews = Math.floor(Math.random() * (197 - 83 + 1)) + 83;
+        let currentViews = baseViews;
+        viewCounter.textContent = currentViews;
+        lucide.createIcons(); // Criar ícones iniciais
+
+        setInterval(() => {
+            const change = Math.floor(Math.random() * 5) - 2; // -2, -1, 0, 1, 2
+            currentViews += change;
+
+            // Garante que o número não se afaste muito da base
+            if (currentViews < baseViews - 15) {
+                currentViews = baseViews - 15;
+            } else if (currentViews > baseViews + 20) {
+                currentViews = baseViews + 20;
+            }
+
+            viewCounter.classList.add('updated');
+            setTimeout(() => {
+                viewCounter.textContent = currentViews;
+                viewCounter.classList.remove('updated');
+            }, 150);
+
+        }, Math.random() * (5000 - 2500) + 2500); // Intervalo aleatório entre 2.5 e 5 segundos
+    }
+
+    initLiveViews();
     lucide.createIcons();
 });

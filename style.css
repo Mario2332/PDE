@@ -65,3 +65,40 @@ body {
 .special-bonus {
     border-color: #FACC15;
 }
+
+.live-view-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(30, 64, 175, 0.1);
+    border: 1px solid #1e40af;
+    color: #93c5fd;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    max-width: max-content;
+}
+
+.live-view-box i {
+    width: 16px;
+    height: 16px;
+    animation: pulse-eye 2s infinite;
+}
+
+#view-counter {
+    font-weight: bold;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+#view-counter.updated {
+    transform: scale(1.2);
+}
+
+
+@keyframes pulse-eye {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
