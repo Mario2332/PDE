@@ -115,17 +115,50 @@ document.addEventListener('DOMContentLoaded', function() {
         const viewCounter = document.getElementById('live-view-counter');
         if (!viewCounter) return;
 
-        let currentViews = Math.floor(Math.random() * (437 - 281 + 1)) + 281;
+        let currentViews;
+        const now = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"}));
+        const hour = now.getHours();
+
+        // Define o intervalo inicial com base na hora
+        if (hour >= 22 || hour < 6) {
+            // Horário de madrugada: 5 a 15
+            currentViews = Math.floor(Math.random() * 11) + 5;
+        } else {
+            // Outros horários: 40 a 60
+            currentViews = Math.floor(Math.random() * 21) + 40;
+        }
+
         viewCounter.textContent = currentViews;
 
         setInterval(() => {
-            // Gera um aumento pequeno e aleatório (entre 1 e 3)
-            const increase = Math.floor(Math.random() * 3) + 1;
-            currentViews += increase;
+            // Flutuação: 75% de chance de subir, 25% de chance de descer
+            const shouldIncrease = Math.random() < 0.75; 
+            
+            if (shouldIncrease) {
+                const increase = Math.floor(Math.random() * 3) + 1; // Aumenta de 1 a 3
+                currentViews += increase;
+            } else {
+                const decrease = Math.floor(Math.random() * 2) + 1; // Diminui 1 ou 2
+                currentViews -= decrease;
+            }
+            
+            // Define limites para a variação
+            const minNight = 5;
+            const maxNight = 25;
+            const minDay = 40;
+            const maxDay = 80;
+
+            if (hour >= 22 || hour < 6) {
+                if (currentViews < minNight) currentViews = minNight;
+                if (currentViews > maxNight) currentViews = maxNight;
+            } else {
+                if (currentViews < minDay) currentViews = minDay;
+                if (currentViews > maxDay) currentViews = maxDay;
+            }
             
             viewCounter.textContent = currentViews;
 
-        }, Math.random() * (9000 - 4000) + 4000); // Intervalo mais longo e aleatório entre 4 e 9 segundos
+        }, Math.random() * (8000 - 3000) + 3000); // Intervalo aleatório entre 3 e 8 segundos
     }
 
     initLiveViewCounter();
